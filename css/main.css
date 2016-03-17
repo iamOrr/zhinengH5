@@ -1,0 +1,605 @@
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* public */
+.process-area{
+    position: absolute;
+    width: 387px;
+    height: 196px;
+    top: 27px;
+    left: 121px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/process.png') no-repeat;
+}
+.left-val{
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    font-weight: bold;
+    color: rgb(202,218,225);
+}
+.right-val{
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    font-weight: bold;
+    color: rgb(202,218,225);
+}
+.process-info{
+    position: absolute;
+    width: 268px;
+    height: 112px;
+    top: 78px;
+    left: 62px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/process-info.png') no-repeat;
+}
+.process-percent{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 74px;
+    line-height: 74px;
+    font-weight: bold;
+    font-size: 65px;
+    color: #fff;
+}
+#return-btn{
+    position: absolute;
+    left: 20px;
+    top: 14px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/return.png');
+    width: 109px;
+    height: 68px;
+}
+#share-btn{
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/share.png');
+    width: 109px;
+    height: 68px;
+}
+.selection{
+    position: absolute;
+    bottom: 172px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.swiper-container2{
+    height: 550px;
+}
+.swiper-container2 .swiper-slide{
+    width: 428px;
+    font-size: 30px;
+    line-height: 62.5px;
+    margin: 0 auto;
+    color: rgb(188,210,220);
+}
+.swiper-container2 .swiper-slide-active{
+    color: #fff;
+}
+.seledbg{
+    position: absolute;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/seled.png') no-repeat;
+    left: 106px;
+    top: 97px;
+    width: 428px;
+    height: 60px;
+}
+.slidesee{
+    position: absolute;
+    left: 20px;
+    top: 765px;
+    width: 67px;
+    height: 163px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/slide.gif') no-repeat;
+}
+
+.nengliang{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.p-light{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17px;
+    height: 8px;
+    z-index: 1;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/processlight.png');
+}
+
+.leida{
+    position: absolute;
+    top: 350px;
+    left: 20px;
+    width: 243px;
+    height: 234px;
+}
+.leidatu{
+    position: absolute;
+    top: 350px;
+    left: 20px;
+    width: 243px;
+    height: 234px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/leida.png');
+}
+.loading2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/bg0.jpg');
+}
+.loadinghead{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 240px;
+    top: 400px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/loading.png');
+    background-position: 0 0;
+
+    animation: ld 2s steps(12, end) infinite;
+    -webkit-animation: ld 2s steps(12, end) infinite;
+}
+.pace-progress{
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    bottom: -50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(94,181,218);
+}
+
+@keyframes ld{
+    from { background-position: 0 0; }
+    to { background-position: -1920px 0; }
+}
+@-webkit-keyframes ld{
+    from { background-position: 0 0; }
+    to { background-position: -1920px; }
+}
+/*fengmian*/
+.fengmian{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1136px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/bgm.jpg');
+}
+.title{
+    position: absolute;
+    left: 33px;
+    top: 267px;
+    width: 565px;
+    height: 595px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/title.png');
+}
+
+#title1{
+    position: absolute;
+    left: 33px;
+    top: 220px;
+    width: 555px;
+    height: 105px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/t1.png');
+    background-position-x: 0;
+}
+.t1a{
+    animation: laile .5s steps(2) infinite;
+    -webkit-animation: laile .5s steps(2) infinite;
+}
+@keyframes laile{
+    from{background-position: 0 0;}
+    to{background-position: -1110px 0;}
+}
+@-webkit-keyframes laile{
+    from{background-position: 0 0;}
+    to{background-position: -1110px 0;}
+}
+
+#title2{
+    position: absolute;
+    left: 79px;
+    top: 350px;
+    width: 325px;
+    height: 61px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/t2.png');
+}
+
+#title3{
+    position: absolute;
+    left: 79px;
+    top: 450px;
+    width: 505px;
+    height: 140px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/t3.png');
+}
+.t3a{
+    animation: ma .5s steps(2) infinite;
+    -webkit-animation: ma .5s steps(2) infinite;
+}
+@keyframes ma{
+    from{background-position: 0 0;}
+    to{background-position: -1010px 0;}
+}
+@-webkit-keyframes ma{
+    from{background-position: 0 0;}
+    to{background-position: -1010px 0;}
+}
+
+
+#title4{
+    position: absolute;
+    left: 79px;
+    top: 720px;
+    width: 450px;
+    height: 115px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/t4.png');
+}
+
+.begin{
+    position: absolute;
+    left: 136px;
+    bottom: 180px;
+    width: 328px;
+    height: 70px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/begin.png');
+
+    -webkit-animation: toTop linear 1.5s infinite;
+    animation: toTop linear 1.5s infinite;
+}
+@keyframes toTop{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes toTop{
+    0%{
+        -webkit-transform: scale(1);
+    }
+    50%{
+        -webkit-transform: scale(1.2);
+    }
+    100%{
+        -webkit-transform: scale(1);
+    }
+}
+/*xuanze*/
+.xuanze{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1136px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/bg0.jpg');
+}
+.chakan{
+    position: absolute;
+    left: 10px;
+    top: 422px;
+    width: 56px;
+    height: 140px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/slide.png');
+}
+.pick{
+    position: absolute;
+    left: 224px;
+    top: 25px;
+    width: 197px;
+    height: 39px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/pickone.png');
+}
+#s1{
+    position: absolute;
+    left: 81px;
+    top: 80px;
+    width: 183px;
+    height: 128px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s1.png');
+}
+#s2{
+    position: absolute;
+    left: 373px;
+    top: 80px;
+    width: 183px;
+    height: 128px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s2.png');
+}
+#s3{
+    position: absolute;
+    left: 81px;
+    top: 240px;
+    width: 183px;
+    height: 151px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s3.png');
+}
+#s4{
+    position: absolute;
+    left: 373px;
+    top: 240px;
+    width: 183px;
+    height: 147px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s4.png'); 
+}
+#s5{
+    position: absolute;
+    left: 81px;
+    top: 433px;
+    width: 183px;
+    height: 140px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s5.png');
+}
+#s6{
+    position: absolute;
+    left: 373px;
+    top: 411px;
+    width: 183px;
+    height: 162px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s6.png');
+}
+#s7{
+    position: absolute;
+    left: 81px;
+    top: 600px;
+    width: 183px;
+    height: 143px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s7.png');    
+}
+#s8{
+    position: absolute;
+    left: 373px;
+    top: 617px;
+    width: 183px;
+    height: 127px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s8.png');    
+}
+#s9{
+    position: absolute;
+    left: 81px;
+    top: 780px;
+    width: 183px;
+    height: 138px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s9.png');    
+}
+#s10{
+    position: absolute;
+    left: 373px;
+    top: 786px;
+    width: 183px;
+    height: 132px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/s10.png');    
+}
+
+.center{
+    text-align: center;
+}
+.seled{
+    -webkit-animation: toBig linear .4s;
+    animation: toBig linear .4s;
+}
+@keyframes toBig{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes toBig{
+    from{
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        -webkit-transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.w-seled{
+    color: rgb(237,118,53);
+}
+
+
+/* page1 */
+.page-detail1{
+    width: 640px;
+    height: 1136px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/bg1.jpg');
+}
+.katong{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    right: 47px;
+    top: 229px;
+    background: url('http://mfiles.sohu.com/news/yufeng/imgs2/katong2.png');
+    background-position: 0 0;
+
+    animation: kt1 2s steps(29, end) infinite;
+    -webkit-animation: kt1 2s steps(29, end) infinite;
+}
+
+@keyframes kt1{
+    from { background-position: 0 0; }
+    to { background-position: -11600px 0; }
+}
+@-webkit-keyframes kt1{
+    from { background-position: 0 0; }
+    to { background-position: -11600px; }
+}
+/*fengdi*/
+.fengdi{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/bg0.jpg');
+    width: 640px;
+    height: 1136px;
+}
+.wenzi{
+    position: absolute;
+    left: 100px;
+    bottom: 250px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/wenzi.png');
+    width: 440px;
+    height: 173px;
+}
+.fengdiz{
+    position: absolute;
+    left: 60px;
+    top: 200px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/fendiz.gif');
+    width: 520px;
+    height: 285px;
+}
+.shou{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/shou.png');
+    width: 369px;
+    height: 107px;
+
+    animation: shar linear 1s infinite;
+    -webkit-animation: shar linear 1s infinite;
+}
+@keyframes shar{
+    0%{ top: 20px; }
+    50%{ top: 0; }
+    100%{ top: 20px; }
+}
+@-webkit-keyframes shar{
+    0%{ top: 20px; }
+    50%{ top: 0; }
+    100%{ top: 20px; }
+}
+
+.erweima{
+    position: absolute;
+    width: 167px;
+    height: 167px;
+    left: 237px;
+    top: 417px;
+}
+#result1{
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 520px;
+    height: 45px;
+    font-size: 28px;
+    line-height: 45px;
+    color: #fff;
+    font-weight: bold;
+}
+#result2{
+    position: absolute;
+    left: 0;
+    top: 62px;
+    width: 520px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    color: #34b3e7;
+    font-weight: bold;
+}
+#result3{
+    position: absolute;
+    left: 0;
+    top: 120px;
+    width: 520px;
+    height: 50px;
+    font-size: 70px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+#result4{
+    position: absolute;
+    left: 0;
+    top: 190px;
+    width: 520px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+/* detail animations */
+.ppani{
+    animation: ppa .2s linear;
+    -webkit-animation: ppa .2s linear;
+}
+@keyframes ppa{
+    0%{top: 0;opacity: 1;}
+    50%{top: 74px;opacity: 0;}
+    51%{top: -74px;opacity: 0;}
+    100%{top: 0;opacity: 1;}
+}
+@-webkit-keyframes ppa{
+    0%{top: 0;opacity: 1;}
+    50%{top: 74px;opacity: 0;}
+    51%{top: -74px;opacity: 0;}
+    100%{top: 0;opacity: 1;}
+}
+
+.fdreturn{
+    position: absolute;
+    left: 212.5px;
+    top: 550px;
+    background: url('http://news.sohu.com/upload/yufeng/imgs2/fdreturn.png') no-repeat;
+    width: 215px;
+    height: 80px;
+}
+/*.leidaani{
+    animation: leid 1s linear;
+    -webkit-animation: leid 1s linear;
+}
+@keyframes leid{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@-webkit-keyframes leid{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}*/

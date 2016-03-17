@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>人工智能能否替代你的工作</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://news.sohu.com/upload/yufeng/zhineng/css3/animate.css">
+    <link rel="stylesheet" type="text/css" href="http://news.sohu.com/upload/yufeng/shishang5/css/swiper.min.css">
+
+    <link rel="stylesheet" type="text/css" href="http://news.sohu.com/upload/commonzzx/normal.css">
+    <script src="http://news.sohu.com/upload/commonzzx/preload.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="http://news.sohu.com/upload/yufeng/shishang5/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <style>
+        *{padding: 0;margin: 0;}
+        html, body, .main {
+            font-family: 微软雅黑;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .katong{
+            will-change: background-position;
+            transform: translate3d(0, 0, 0);
+        }
+    </style>
+</head>
+<body ontouchmove="event.preventDefault()"> 
+    <div class="main">
+        <div class="loading2">
+            <div class="loadinghead"> 
+                <div class="pace-progress">0</div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="fengmian"></div>
+                    <div id="title1"></div>
+                    <div id="title2"></div>
+                    <div id="title3"></div>
+                    <div id="title4"></div>
+                    <div id="begin" class="begin"></div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div id="xuanze" class="xuanze">
+                        <div class="pick"></div>
+                        <div id="s1" ind="0" class="sels"></div>
+                        <div id="s2" ind="1" class="sels"></div>
+                        <div id="s3" ind="2" class="sels"></div>
+                        <div id="s4" ind="3" class="sels"></div>
+                        <div id="s5" ind="4" class="sels"></div>
+                        <div id="s6" ind="5" class="sels"></div>
+                        <div id="s7" ind="6" class="sels"></div>
+                        <div id="s8" ind="7" class="sels"></div>
+                        <div id="s9" ind="8" class="sels"></div>
+                        <div id="s10" ind="9" class="sels"></div>
+                    </div>
+                </div>
+                <div id="sildermain" class="swiper-slide">
+                    <div class="page-detail1">
+                        <div id="return-btn"></div>
+                        <div id="share-btn"></div>
+                        <div class="process-area">
+                            <div class="left-val">0%</div>
+                            <div class="right-val">100%</div>
+                            <div class="process-info">
+                                <div id="process-per" class="process-percent">64.9%</div>
+                            </div>
+                            <div class="p-light"></div>
+                            <canvas class="nengliang" id="nengliang"></canvas>
+                        </div>
+                        <div id="renwu" class="katong"></div>
+                        <div id="slidesee" class="slidesee"></div>
+
+                        <div class="leidatu"></div>
+                        <canvas class="leida" id="leida" width="243" height="234"></canvas>
+
+                        <div class="selection">
+                            <div class="seledbg"></div>
+                            <div class="swiper-container2 swiper-container-vertical">
+                                <div id="slides" class="swiper-wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fengd" class="swiper-slide swiper-no-swiping">
+                    <div class="fengdi"></div>
+                    <div class="wenzi"></div>
+                    <div class="fengdiz">
+                        <div id="result1" class="center"></div>
+                        <div id="result2" class="center">的可替代率为</div>
+                        <div id="result3" class="center"></div>
+                        <div id="result4" class="center"></div>
+                    </div>
+                    <div class="shou"></div>
+                    <div id="fdreturn" class="fdreturn"></div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // adapt the mobile screen 024817
+        function pageUtil(selector){
+            this.ele = document.querySelectorAll(selector)[0];
+            this.scaleNum = document.documentElement.clientWidth/640;
+            return this;
+        }
+        pageUtil.prototype.response = function(height){
+            this.ele.style.cssText = "-webkit-transform-origin: 0 0 0px; -webkit-transform: scale("+this.scaleNum+");position: absolute;width:640px;height:1136px";
+            return this;
+        }
+        pageUtil.prototype.rotate = function(){
+            this.ele["style"]["cssText"] = "width: "+1008+"px;height: "+640+"px;-webkit-transform:rotate(90deg) translate(-50%,-50%);"+
+            "-webkit-transform-origin:0 0; position: absolute; top: 50%; left: 50%;"
+            return this;
+        }
+
+        // reload
+        var loader = new resLoader({
+            resources: [           
+                "http://news.sohu.com/upload/yufeng/imgs2/process.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/process-info.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/return.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/share.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/seled.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/slide.gif",
+                "http://news.sohu.com/upload/yufeng/imgs2/processlight.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/leida.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/bg0.jpg",
+                "http://news.sohu.com/upload/yufeng/imgs2/loading.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/bgm.jpg",
+                "http://news.sohu.com/upload/yufeng/imgs2/title.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/t1.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/t2.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/t3.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/t4.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/begin.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/bg0.jpg",
+                "http://news.sohu.com/upload/yufeng/imgs2/pickone.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s1.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s2.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s3.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s4.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s5.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s6.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s7.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s8.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s9.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/s10.png",
+                "http://news.sohu.com/upload/yufeng/imgs2/bg1.jpg",
+                "http://mfiles.sohu.com/news/yufeng/imgs2/katong2.png"
+            ],
+            onStart: function(total) {},
+            onProgress: function(current, total) {
+              var percent = parseInt(current / total * 100) + '%';
+              $('.pace-progress').text(percent);
+            },
+            onComplete: function(total) {          
+                $('.loading2').hide();
+                $("#title1").addClass("animated bounceInDown");
+                $("#title2").addClass("animated zoomIn");
+                $("#title3").addClass("animated bounceInUp");
+                $("#title4").addClass("animated fadeIn");
+
+                setTimeout(function() {
+                    $("#title1").removeClass("animated bounceInDown");
+                    $("#title1").addClass("t1a");
+                    $("#title3").removeClass("animated bounceInUp");
+                    $("#title3").addClass("t3a");
+                },1001);
+            }
+        });
+        var loader2 = new resLoader({
+            resources: [    
+                "http://news.sohu.com/upload/yufeng/imgs2/bg0.jpg",
+                "http://news.sohu.com/upload/yufeng/imgs2/loading.png"
+            ],
+            onStart: function(total) {},
+            onProgress: function(current, total) {},
+            onComplete: function(total) {          
+                loader.start();
+            }
+        });
+        loader2.start();
+
+        new pageUtil(".main").response(1136);
+        var swiper = new Swiper('.swiper-container', {
+            pagination: false,
+            speed: 500,
+            paginationClickable: true,
+            direction: 'vertical'
+        });
+        
+    </script>
+    
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "http://hm.baidu.com/hm.js?c154d502f02b12a996c34a02281a3bff";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
